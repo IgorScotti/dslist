@@ -24,7 +24,7 @@ public class GameService {
 		
 	}
 	@Transactional(readOnly = true)
-	public List<GameMinDTO> finAll(){
+	public List<GameMinDTO> findAll(){
 		List<Game> result = gameRepository.findAll();
 		 return result.stream().map(x -> new GameMinDTO(x)).toList();
 		 
